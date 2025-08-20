@@ -10,19 +10,23 @@ export interface LogProps {
   message: string;
 }
 
-export default async function Log({
-  stack,
-  level,
-  default_package,
-  message,
-}: LogProps) {
-  axios.post("http://20.244.56.144/evaluation-service/logs", {
-    headers: {
-      Authorization: `Bearer ${BEARER_TOKEN}`,
-    },
-    stack: { stack },
-    level: { level },
-    package: { default_package },
-    message: { message },
-  });
+export async function POST(request: NextRequest) {
+  
 }
+
+// export default async function Log({
+//   stack,
+//   level,
+//   default_package,
+//   message,
+// }: LogProps) {
+//   axios.post("http://20.244.56.144/evaluation-service/logs", {
+//     headers: {
+//       Authorization: `Bearer ${BEARER_TOKEN}`,
+//     },
+//     stack: stack,
+//     level: level,
+//     package: default_package,
+//     message: message,
+//   });
+// }

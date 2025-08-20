@@ -20,9 +20,9 @@ export default async function Log({
     headers: {
       Authorization: `Bearer ${BEARER_TOKEN}`,
     },
-    stack: { stack },
-    level: { level },
-    package: { default_package },
-    message: { message },
+    stack: stack,
+    level: level,
+    package: default_package,
+    message: message,
   });
 }
